@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  next-app:
+    container_name: next-app
+    image: ghcr.io/thetote/nxt-env:latest
+    environment:
+      ENV_VARIABLE: ALSOME
+      NEXT_PUBLIC_SOME_ENV_VAR: CHANGEME
+    restart: always
+    ports:
+      - 3000:3000
